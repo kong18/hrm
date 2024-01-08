@@ -17,6 +17,9 @@ namespace CleanArchitecture.Application.Orders.CreateOrder
 
         private void ConfigureValidationRules()
         {
+            RuleFor(x => x.Total)
+                .GreaterThan(0)
+                .WithMessage("Total must be greater than 0");
         }
     }
 }

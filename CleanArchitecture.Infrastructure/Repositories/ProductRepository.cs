@@ -2,6 +2,7 @@
 using CleanArchitecture.Domain.Entities;
 using CleanArchitecture.Domain.Repositories;
 using CleanArchitecture.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,10 @@ namespace CleanArchitecture.Infrastructure.Repositories
         {
             return await FindAllAsync(x => ids.Contains(x.Id), cancellationToken);
         }
+
+
+       
+
+
     }
 }
